@@ -68,3 +68,18 @@ if ($result->num_rows > 0) {
 
 $conn->close();
 ?>
+
+
+function OpenCon()
+ {
+ $dbhost = "localhost";
+ $dbuser = "TestJanuary";
+ $dbpass = "root";
+ $db = "book test";
+
+
+ $conn = new mysqli($dbhost, $dbuser, $dbpass,  $db) or die("Connect failed: %s\n". $conn -> error);
+
+ 
+ return $conn;
+ }
